@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ola-dev-portfolio-sand.vercel.app/sitemap.xml
