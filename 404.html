@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>404 | Page Not Found - Ola Dev</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      background: #080D12;
+      color: #F2F5F4;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .error-container {
+      max-width: 600px;
+    }
+
+    .brand {
+      color: #55D6BE;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 45px;
+    }
+
+    .error-code {
+      font-size: clamp(100px, 25vw, 190px);
+      line-height: 1;
+      font-weight: 800;
+      color: #55D6BE;
+      text-shadow: 0 0 35px rgba(85, 214, 190, 0.2);
+    }
+
+    h1 {
+      font-size: 30px;
+      margin: 20px 0 12px;
+    }
+
+    p {
+      color: #A2B0B5;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .home-button {
+      display: inline-block;
+      padding: 14px 25px;
+      background: #55D6BE;
+      color: #080D12;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .home-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(85, 214, 190, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <main class="error-container">
+    <div class="brand">Ola Dev<span>.</span></div>
+
+    <div class="error-code">404</div>
+
+    <h1>Oops! Page Not Found</h1>
+
+    <p>
+      The page you're looking for doesn't exist or may
+      have been moved. Let's get you back on track.
+    </p>
+
+    <a href="/" class="home-button">Back to Homepage →</a>
+  </main>
+</body>
+</html>
