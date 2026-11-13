@@ -259,3 +259,26 @@ backToTop.addEventListener('click', () => {
     ).matches ? 'instant' : 'smooth'
   });
 });
+// Active navigation link on scroll
+const pageSections = document.querySelectorAll('section[id]');
+const navigationLinks = document.querySelectorAll('.nav a');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navigationLinks.forEach((link) => {
+        link.classList.remove('active');
+
+        if (link.getAttribute('href') === `#${entry.target.id}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+pageSections.forEach((section) => {
+  sectionObserver.observe(section);
+});
