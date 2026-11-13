@@ -282,3 +282,22 @@ const sectionObserver = new IntersectionObserver((entries) => {
 pageSections.forEach((section) => {
   sectionObserver.observe(section);
 });
+// Copy email address
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', async () => {
+    const email = copyEmailBtn.dataset.email;
+
+    try {
+      await navigator.clipboard.writeText(email);
+      copyEmailBtn.textContent = 'Email Copied ✓';
+
+      setTimeout(() => {
+        copyEmailBtn.textContent = 'Copy Email';
+      }, 2000);
+    } catch (error) {
+      copyEmailBtn.textContent = 'Unable to Copy';
+    }
+  });
+}
