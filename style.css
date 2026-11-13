@@ -1946,3 +1946,19 @@ footer a:hover {
 .nav a.active::after {
   width: 100%;
 }
+.copy-email-btn {
+  margin-top: 10px;
+  padding: 9px 16px;
+  border: 1px solid var(--teal);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--teal);
+  cursor: pointer;
+  font: inherit;
+  transition: 0.3s ease;
+}
+
+.copy-email-btn:hover {
+  background: var(--teal);
+  color: var(--midnight);
+}
