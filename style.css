@@ -1938,3 +1938,11 @@ footer a:hover {
     font-size: 28px;
   }
 }
+/* Active navigation link */
+.nav a.active {
+  color: var(--teal);
+}
+
+.nav a.active::after {
+  width: 100%;
+}
