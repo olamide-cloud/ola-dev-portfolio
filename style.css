@@ -1962,3 +1962,12 @@ footer a:hover {
   background: var(--teal);
   color: var(--midnight);
 }
+/* Enhanced project button hover effects */
+.project-card a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(85, 214, 190, 0.15);
+}
