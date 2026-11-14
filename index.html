@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,8 @@
   <!-- SEO -->
   <title>Ola Dev | Frontend Web Developer in Lagos, Nigeria</title>
 
-  <meta name="description" content="Ola Dev is the portfolio of Olamide Ibrahim, a frontend web developer based in Lagos, Nigeria, showcasing creative websites, web development projects, technical skills and professional services.">
+  <meta name="description" content="Ola Dev is the portfolio of Olamide Ibrahim, a frontend web developer based in Lagos, Nigeria, showcasing creative websites, web development projects, technical skills and professional experience.">
+
   <meta name="keywords" content="Ola Dev, Olamide Ibrahim, frontend developer, web developer in Lagos, HTML, CSS, JavaScript, Supabase, portfolio">
 
   <meta name="author" content="Olamide Ibrahim">
@@ -21,7 +23,7 @@
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="Ola Dev | Frontend Web Developer">
-  <meta property="og:description" content="Explore Olamide Ibrahim's web development portfolio, projects and technical skills.">
+  <meta property="og:description" content="Discover Olamide Ibrahim's portfolio at Ola Dev, featuring frontend web development projects, technical skills, professional experience and a growing passion for creative digital experiences.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ola-dev-portfolio-sand.vercel.app/">
   <meta property="og:image" content="https://ola-dev-portfolio-sand.vercel.app/og-image.png">
@@ -30,7 +32,7 @@
   <!-- Twitter / X Sharing -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ola Dev | Frontend Web Developer">
-  <meta name="twitter:description" content="Explore my web development portfolio, projects and technical skills.">
+  <meta name="twitter:description" content="Explore Ola Dev, the portfolio of Olamide Ibrahim, showcasing creative web development projects, technical skills and professional experience.">
   <meta name="twitter:image" content="https://ola-dev-portfolio-sand.vercel.app/og-image.png">
 
   <!-- Favicon -->
@@ -42,50 +44,72 @@
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Structured Data -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Olamide Ibrahim",
-  "url": "https://ola-dev-portfolio-sand.vercel.app/",
-  "jobTitle": "Frontend Web Developer",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Lagos",
-    "addressCountry": "NG"
-  },
-  "sameAs": [
-    "https://github.com/olamide-cloud",
-    "https://www.linkedin.com/in/ola-dev-4b6a1044a"
-  ]
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Olamide Ibrahim",
+    "url": "https://ola-dev-portfolio-sand.vercel.app/",
+    "jobTitle": "Frontend Web Developer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lagos",
+      "addressCountry": "NG"
+    },
+    "sameAs": [
+      "https://github.com/olamide-cloud",
+      "https://www.linkedin.com/in/ola-dev-4b6a1044a"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
+  <!-- PAGE LOADER -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="loader-logo">&lt;/&gt;</div>
+    <div class="loader-ring"></div>
+    <p class="loader-caption">Building something great...</p>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ACCESSIBILITY -->
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
   <!-- HEADER -->
   <header class="site-header">
 
-    <a class="logo" href="#home">
+    <a class="logo" href="#home" aria-label="Ola Dev homepage">
       <span>&lt;/&gt;</span> Ola<span class="blue">Dev</span>
     </a>
 
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+      type="button"
+    >
       ☰
     </button>
 
-    <nav class="nav">
+    <nav class="nav" id="main-navigation" aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="testimonials">Testimonials</a>
+      <a href="#process">Process</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -96,12 +120,12 @@
   </header>
 
 
-  <main>
+  <main id="main-content">
 
     <!-- HERO SECTION -->
     <section class="hero section" id="home">
 
-      <div class="hero-copy">
+      <div class="hero-copy hero-animate">
 
         <p class="eyebrow">
           <span class="status-dot"></span>
@@ -114,7 +138,11 @@
           Olamide <span class="gradient-text">Ibrahim.</span>
         </h1>
 
-        <h2>Frontend Web Developer</h2>
+        <h2 class="hero-role">
+          I'm a
+          <span id="roleText" class="gradient-text">Frontend Web Developer</span>
+          <span class="typing-cursor" aria-hidden="true"></span>
+        </h2>
 
         <p class="lead">
           I build clean, responsive and user-friendly websites
@@ -131,23 +159,32 @@
             Contact me
           </a>
 
-          <a class="button button-outline" href="Olamide_Ibrahim_CV.pdf" download>
-            Download CV <span>↓</span>
+          <a
+            class="button button-outline"
+            href="Olamide_Ibrahim_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View My CV <span>↗</span>
           </a>
 
         </div>
 
         <div class="socials">
 
-          <a href="https://github.com/olamide-cloud"
-             target="_blank"
-             rel="noopener noreferrer">
+          <a
+            href="https://github.com/olamide-cloud"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub ↗
           </a>
 
-          <a href="https://www.linkedin.com/in/ola-dev-4b6a1044a"
-             target="_blank"
-             rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/in/ola-dev-4b6a1044a"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn ↗
           </a>
 
@@ -156,8 +193,8 @@
       </div>
 
 
-      <!-- DECORATIVE CODE ILLUSTRATION -->
-      <div class="hero-art" aria-label="Decorative code illustration">
+      <!-- HERO ILLUSTRATION -->
+      <div class="hero-art" aria-hidden="true">
 
         <div class="orb orb-one"></div>
         <div class="orb orb-two"></div>
@@ -210,8 +247,48 @@
     </section>
 
 
+    <!-- TECHNOLOGY TICKER -->
+    <div class="tech-ticker" aria-label="Technologies and tools">
+      <div class="tech-ticker-track">
+
+        <div class="tech-ticker-group">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>Java</span>
+          <span>MySQL</span>
+          <span>Supabase</span>
+          <span>GitHub</span>
+          <span>React.js · Learning</span>
+          <span>TypeScript · Learning</span>
+          <span>Firebase · Learning</span>
+          <span>Figma · Learning</span>
+          <span>UI/UX Design · Learning</span>
+        </div>
+
+        <div class="tech-ticker-group" aria-hidden="true">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>Java</span>
+          <span>MySQL</span>
+          <span>Supabase</span>
+          <span>GitHub</span>
+          <span>React.js · Learning</span>
+          <span>TypeScript · Learning</span>
+          <span>Firebase · Learning</span>
+          <span>Figma · Learning</span>
+          <span>UI/UX Design · Learning</span>
+        </div>
+
+      </div>
+    </div>
+
+
     <!-- ABOUT SECTION -->
-    <section class="section about" id="about">
+    <section class="section about reveal" id="about">
 
       <div class="section-heading">
 
@@ -233,59 +310,64 @@
       </p>
 
       <div class="facts">
-
         <span>📍 Lagos, Nigeria</span>
-
         <span>✦ Always learning</span>
-
         <span>↗ Open to collaboration</span>
-
       </div>
 
     </section>
 
-    
-<!-- EDUCATION SECTION -->
-<section class="section education" id="education">
 
-  <div class="section-heading">
-    <p class="eyebrow">ACADEMIC BACKGROUND</p>
+    <!-- EDUCATION SECTION -->
+    <section class="section reveal" id="education">
 
-    <h2>
-      My <span class="gradient-text">education.</span>
-    </h2>
+      <div class="section-heading">
 
-    <p class="section-subtitle">
-      Building a strong foundation in computer science and technology.
-    </p>
-  </div>
+        <p class="eyebrow">MY ACADEMIC BACKGROUND</p>
 
-  <div class="education-card">
-    <div class="education-icon">🎓</div>
+        <h2>
+          Education and
+          <span class="gradient-text">learning.</span>
+        </h2>
 
-    <div class="education-details">
-      <span class="education-status">IN PROGRESS</span>
+      </div>
 
-      <h3>B.Sc. Ed. Computer Science</h3>
+      <article class="education-card">
 
-      <p class="education-school">
-        University of Ilorin, Nigeria
-      </p>
+        <div class="education-icon" aria-hidden="true">
+          🎓
+        </div>
 
-      <p class="education-date">2024 – 2028</p>
+        <div class="education-details">
 
-      <p class="education-description">
-        Developing academic knowledge and practical skills
-        in computer science, programming and information technology.
-      </p>
-    </div>
-  </div>
+          <div class="education-status">
+            IN PROGRESS
+          </div>
 
-</section>
+          <h3>B.Sc. Ed. Computer Science</h3>
+
+          <p class="education-school">
+            University of Ilorin, Nigeria
+          </p>
+
+          <p class="education-date">
+            2024 – 2028
+          </p>
+
+          <p class="education-description">
+            Building a strong foundation in computer science,
+            programming, technology and education.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
 
 
     <!-- SKILLS SECTION -->
-    <section class="section" id="skills">
+    <section class="section reveal" id="skills">
 
       <div class="section-heading">
 
@@ -300,282 +382,331 @@
       <div class="skill-grid">
 
         <article class="skill-card">
-
           <span class="skill-icon">⌘</span>
-
-          <h3>Frontend</h3>
-
+          <h3>Frontend Development</h3>
           <p>HTML · CSS · JavaScript</p>
-
         </article>
 
-
         <article class="skill-card">
-
           <span class="skill-icon">▤</span>
-
           <h3>Programming</h3>
-
           <p>Python · Java</p>
-
         </article>
 
-
         <article class="skill-card">
-
           <span class="skill-icon">◈</span>
-
           <h3>Database</h3>
-
           <p>MySQL · Supabase</p>
-
         </article>
 
-
         <article class="skill-card">
-
           <span class="skill-icon">⌁</span>
-
-          <h3>Tools</h3>
-
+          <h3>Development Tools</h3>
           <p>GitHub · VS Code</p>
-
         </article>
 
       </div>
 
       <p class="small-note">
-        Always learning and improving my technical skills
-        through practical projects.
+        I continue improving my technical skills through
+        practical projects and consistent learning.
       </p>
 
     </section>
 
-    
-<!-- CURRENTLY LEARNING SECTION -->
-<section class="section learning" id="learning">
-  <div class="section-heading">
-    <p class="eyebrow">GROWING MY SKILLS</p>
-    <h2>Currently <span class="gradient-text">learning.</span></h2>
-    <p class="section-subtitle">
-      I'm continuously exploring new technologies and
-      developing my skills to become a better developer
-      and designer.
-    </p>
-  </div>
 
-  <div class="learning-grid">
-    <div class="learning-card">
-      <span class="learning-number">01</span>
-      <h3>Design</h3>
-      <p>Learning to create intuitive and engaging digital experiences.</p>
-      <div class="learning-tags">
-        <span>UI/UX Design</span>
-        <span>Figma</span>
-      </div>
-    </div>
-
-    <div class="learning-card">
-      <span class="learning-number">02</span>
-      <h3>Development</h3>
-      <p>Expanding my frontend and backend development knowledge.</p>
-      <div class="learning-tags">
-        <span>React.js</span>
-        <span>TypeScript</span>
-        <span>Firebase</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- EXPERIENCE SECTION -->
-<section class="section experience" id="experience">
-
-  <div class="section-heading">
-    <p class="eyebrow">MY PROFESSIONAL JOURNEY</p>
-
-    <h2>
-      Work <span class="gradient-text">experience.</span>
-    </h2>
-
-    <p class="section-subtitle">
-      Practical experience gained through workplace learning
-      and hands-on technical support.
-    </p>
-  </div>
-
-  <div class="experience-card">
-    <div class="experience-top">
-      <div>
-        <h3>IT Intern</h3>
-        <p class="experience-company">Mod Group · Lagos, Nigeria</p>
-      </div>
-
-      <span class="experience-date">Aug – Oct 2026</span>
-    </div>
-
-    <p class="experience-description">
-      Worked alongside the IT Manager, gaining practical experience
-      in IT operations, computer maintenance and technical support.
-    </p>
-
-    <h4>Key responsibilities</h4>
-
-    <div class="tags">
-      <span>Computer Maintenance</span>
-      <span>Troubleshooting</span>
-      <span>Software Installation</span>
-      <span>Networking</span>
-      <span>Data Management</span>
-      <span>Technical Support</span>
-    </div>
-  </div>
-
-</section>
-
-    
-    <!-- PROJECTS SECTION -->
-    <section class="section" id="projects">
+    <!-- CURRENTLY LEARNING -->
+    <section class="section learning reveal" id="learning">
 
       <div class="section-heading">
 
-        <p class="eyebrow">SELECTED WORK</p>
+        <p class="eyebrow">GROWING MY SKILLS</p>
 
         <h2>
-          Projects I'm <span class="gradient-text">proud of.</span>
+          Currently <span class="gradient-text">learning.</span>
         </h2>
 
         <p class="section-subtitle">
-          A few examples of what I've been building and learning.
+          Technologies and creative skills I'm actively exploring
+          as I grow as a developer.
         </p>
 
       </div>
 
-      <div class="project-grid">
+      <div class="learning-grid">
 
-        <!-- PROJECT 1: OLA'S FASTFOOD WEBSITE -->
-        <article class="project-card">
-
-          <div class="project-info">
-            <div>
-              <h3>Ola's Fastfood Website</h3>
-
-              <p>
-                A restaurant website built to showcase food,
-                provide customers with an easy ordering experience
-                and allow administrators to manage restaurant activities.
-              </p>
-            </div>
-
-            <span class="project-number">01</span>
+        <article class="learning-card">
+          <span class="learning-number">01</span>
+          <h3>UI/UX Design</h3>
+          <p>Learning to create useful and intuitive user experiences.</p>
+          <div class="learning-tags">
+            <span>UI/UX</span>
+            <span>User Experience</span>
           </div>
-
-          <div class="tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Supabase</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://olamide-cloud.github.io/olas-fastfood/"
-               target="_blank"
-               rel="noopener noreferrer">
-              Live Demo ↗
-            </a>
-
-            <a href="https://github.com/olamide-cloud/olas-fastfood"
-               target="_blank"
-               rel="noopener noreferrer">
-              GitHub Repository ↗
-            </a>
-          </div>
-
         </article>
 
-
-        <!-- PROJECT 2: RESTAURANT ADMIN DASHBOARD -->
-        <article class="project-card">
-
-          <div class="project-info">
-            <div>
-              <h3>Restaurant Admin Dashboard</h3>
-
-              <p>
-                An administrative dashboard designed to manage
-                restaurant orders, menu information and restaurant
-                data through an organized interface.
-              </p>
-            </div>
-
-            <span class="project-number">02</span>
+        <article class="learning-card">
+          <span class="learning-number">02</span>
+          <h3>Figma</h3>
+          <p>Exploring interface design, layouts and prototyping.</p>
+          <div class="learning-tags">
+            <span>Design</span>
+            <span>Prototyping</span>
           </div>
-
-          <div class="tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Supabase</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://olamide-cloud.github.io/olas-fastfood/admin.html"
-               target="_blank"
-               rel="noopener noreferrer">
-              Admin Demo ↗
-            </a>
-
-            <a href="https://github.com/olamide-cloud/olas-fastfood"
-               target="_blank"
-               rel="noopener noreferrer">
-              GitHub Repository ↗
-            </a>
-          </div>
-
         </article>
 
-
-        <!-- PROJECT 3: FUTURE PROJECT -->
-        <article class="project-card project-placeholder">
-
-          <div class="project-info">
-            <div>
-              <h3>More projects coming</h3>
-
-              <p>
-                This space is reserved for my next landing page,
-                business website or JavaScript project.
-              </p>
-            </div>
-
-            <span class="project-number">03</span>
+        <article class="learning-card">
+          <span class="learning-number">03</span>
+          <h3>React.js</h3>
+          <p>Building my understanding of component-based development.</p>
+          <div class="learning-tags">
+            <span>Frontend</span>
+            <span>Components</span>
           </div>
+        </article>
 
-          <div class="tags">
-            <span>Keep building</span>
-            <span>Keep learning</span>
+        <article class="learning-card">
+          <span class="learning-number">04</span>
+          <h3>TypeScript</h3>
+          <p>Learning typed JavaScript for more structured applications.</p>
+          <div class="learning-tags">
+            <span>JavaScript</span>
+            <span>Types</span>
           </div>
+        </article>
 
-          <div class="project-links">
-            <a href="#contact">
-              Work with me ↗
-            </a>
+        <article class="learning-card">
+          <span class="learning-number">05</span>
+          <h3>Firebase</h3>
+          <p>Exploring backend services and application integration.</p>
+          <div class="learning-tags">
+            <span>Backend</span>
+            <span>Database</span>
           </div>
-
         </article>
 
       </div>
 
-      <p class="small-note">
-        Explore my projects and check back for more work.
-      </p>
+    </section>
+
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section reveal" id="experience">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">PRACTICAL EXPERIENCE</p>
+
+        <h2>
+          Where I've
+          <span class="gradient-text">worked.</span>
+        </h2>
+
+      </div>
+
+      <article class="experience-card">
+
+        <div class="experience-top">
+
+          <div>
+            <p class="experience-company">MOD GROUP</p>
+            <h3>IT Intern</h3>
+            <p>Lagos, Nigeria</p>
+          </div>
+
+          <span class="experience-date">
+            Aug – Oct 2026
+          </span>
+
+        </div>
+
+        <p class="experience-description">
+          Worked alongside the IT Manager, gaining practical
+          experience in IT operations, computer maintenance,
+          troubleshooting and technical support.
+        </p>
+
+        <div class="tags">
+          <span>Computer Maintenance</span>
+          <span>Troubleshooting</span>
+          <span>Software Installation</span>
+          <span>Networking</span>
+          <span>Data Management</span>
+          <span>Technical Support</span>
+        </div>
+
+      </article>
 
     </section>
 
 
+    
+<!-- PROJECTS SECTION -->
+<section class="section reveal" id="projects">
+
+  <div class="section-heading">
+    <p class="eyebrow">SELECTED WORK</p>
+
+    <h2>
+      Projects I'm
+      <span class="gradient-text">proud of.</span>
+    </h2>
+
+    <p class="section-subtitle">
+      A few examples of what I've been building and learning.
+    </p>
+  </div>
+
+  <div class="project-grid">
+
+    <!-- PROJECT 1 -->
+    <article class="project-card">
+
+      <div class="project-category">
+        <span class="project-category-dot"></span>
+        WEB DEVELOPMENT
+      </div>
+
+      <div class="project-info">
+        <div>
+          <h3>Ola's Fastfood Website</h3>
+
+          <p>
+            A restaurant website built to showcase food,
+            provide customers with an easy ordering experience
+            and allow administrators to manage restaurant activities.
+          </p>
+        </div>
+
+        <span class="project-number">01</span>
+      </div>
+
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Supabase</span>
+      </div>
+
+      <div class="project-links">
+        <a
+          href="https://olamide-cloud.github.io/olas-fastfood/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Live Demo ↗
+        </a>
+
+        <a
+          href="https://github.com/olamide-cloud/olas-fastfood"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub Repository ↗
+        </a>
+      </div>
+
+    </article>
+
+
+    <!-- PROJECT 2 -->
+    <article class="project-card">
+
+      <div class="project-category">
+        <span class="project-category-dot"></span>
+        DASHBOARD DEVELOPMENT
+      </div>
+
+      <div class="project-info">
+        <div>
+          <h3>Restaurant Admin Dashboard</h3>
+
+          <p>
+            An administrative dashboard designed to manage
+            restaurant orders, menu information and restaurant
+            data through an organized interface.
+          </p>
+        </div>
+
+        <span class="project-number">02</span>
+      </div>
+
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Supabase</span>
+      </div>
+
+      <div class="project-links">
+        <a
+          href="https://olamide-cloud.github.io/olas-fastfood/admin.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Admin Demo ↗
+        </a>
+
+        <a
+          href="https://github.com/olamide-cloud/olas-fastfood"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub Repository ↗
+        </a>
+      </div>
+
+    </article>
+
+
+    <!-- PROJECT 3 -->
+    <article class="project-card project-placeholder">
+
+      <div class="project-category">
+        <span class="project-category-dot"></span>
+        UPCOMING WORK
+      </div>
+
+      <div class="project-info">
+        <div>
+          <h3>More Projects Coming</h3>
+
+          <p>
+            I'm working towards building more creative websites,
+            landing pages and practical JavaScript applications.
+            Check back soon to explore my upcoming work.
+          </p>
+        </div>
+
+        <span class="project-number">03</span>
+      </div>
+
+      <div class="tags">
+        <span>Keep Building</span>
+        <span>Keep Learning</span>
+      </div>
+
+      <div class="project-links">
+        <a href="#contact">
+          Work with me ↗
+        </a>
+      </div>
+
+    </article>
+
+  </div>
+
+  <p class="small-note">
+    Explore my projects and check back for more work.
+  </p>
+
+</section>
+
+  
+
+
     <!-- SERVICES SECTION -->
-    <section class="section services">
+    <section class="section services reveal" id="services">
 
       <div class="section-heading">
 
@@ -587,92 +718,109 @@
 
       </div>
 
-
       <div class="service-list">
 
         <div>
-
           <span>01</span>
-
           <h3>Responsive websites</h3>
-
-          <p>
-            Layouts that work across mobile, tablet and desktop.
-          </p>
-
+          <p>Layouts that work across mobile, tablet and desktop.</p>
         </div>
 
-
         <div>
-
           <span>02</span>
-
           <h3>Landing pages</h3>
-
-          <p>
-            Clear, focused pages for products, services and ideas.
-          </p>
-
+          <p>Clear, focused pages for products, services and ideas.</p>
         </div>
 
-
         <div>
-
           <span>03</span>
-
           <h3>Website improvements</h3>
-
-          <p>
-            Helping make existing pages clearer and easier to use.
-          </p>
-
+          <p>Helping make existing pages clearer and easier to use.</p>
         </div>
 
       </div>
 
     </section>
 
-    
-<!-- TESTIMONIALS SECTION -->
-<section class="section testimonials" id="testimonials">
 
-  <div class="section-heading">
-    <p class="eyebrow">CLIENT FEEDBACK</p>
+    <!-- MY DEVELOPMENT PROCESS -->
+    <section class="section process reveal" id="process">
 
-    <h2>
-      What people say
-      <span class="gradient-text">about my work.</span>
-    </h2>
+      <div class="section-heading">
 
-    <p class="section-subtitle">
-      I'm building meaningful connections through every project.
-      Genuine feedback from clients and collaborators will appear here.
-    </p>
-  </div>
+        <p class="eyebrow">HOW I APPROACH MY WORK</p>
 
-  <div class="testimonial-empty">
-    <span class="testimonial-icon">✦</span>
-    <h3>Good work deserves to be heard.</h3>
-    <p>
-      As I continue working on projects and collaborating with others,
-      I'll share their genuine experiences here.
-    </p>
-    <a href="#contact" class="button button-outline">
-      Let's work together ↗
-    </a>
-  </div>
+        <h2>
+          My development
+          <span class="gradient-text">process.</span>
+        </h2>
 
-</section>
+        <p class="section-subtitle">
+          Every project is an opportunity to understand,
+          create, test and improve.
+        </p>
+
+      </div>
+
+      <div class="process-grid">
+
+        <article class="process-card">
+          <span class="process-number">01</span>
+          <div class="process-icon">✦</div>
+          <h3>Understanding the idea</h3>
+          <p>
+            I start by understanding the project goals,
+            audience and problem the website should solve.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span class="process-number">02</span>
+          <div class="process-icon">⌘</div>
+          <h3>Planning and designing</h3>
+          <p>
+            I organize the structure, plan the layout
+            and consider how people will use the website.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span class="process-number">03</span>
+          <div class="process-icon">⌨</div>
+          <h3>Development</h3>
+          <p>
+            I bring the idea to life with code,
+            focusing on clean and responsive implementation.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span class="process-number">04</span>
+          <div class="process-icon">↗</div>
+          <h3>Testing and improvement</h3>
+          <p>
+            I test the result, fix issues and make
+            improvements across different screen sizes.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
 
 
     <!-- CONTACT SECTION -->
-    <section class="section contact" id="contact">
+    <section
+      class="section contact reveal"
+      id="contact"
+      aria-labelledby="contact-heading"
+    >
 
       <p class="eyebrow">
         HAVE A PROJECT IN MIND?
       </p>
 
-      <h2>
+      <h2 id="contact-heading">
         Let's build something
         <span class="gradient-text">great.</span>
       </h2>
@@ -687,8 +835,6 @@
         href="mailto:ym2733861@gmail.com?subject=Let's%20work%20together"
       >
         Email me <span>↗</span>
-       
-        </button>
       </a>
 
     </section>
@@ -708,15 +854,41 @@
       © <span id="year"></span> Ola Dev.
     </p>
 
-    <a href="#home">
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#home" class="footer-back-top">
-      Back to top ↑
-    </a>
+    <div class="footer-links">
+
+      <a
+        href="https://github.com/olamide-cloud"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/ola-dev-4b6a1044a"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn ↗
+      </a>
+
+      <a href="#home" class="footer-back-top">
+        Back to Top ↑
+      </a>
+
+    </div>
 
   </footer>
+
+
+  <!-- BACK TO TOP BUTTON -->
+  <button
+    class="back-to-top"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
 
 
   <!-- FLOATING WHATSAPP BUTTON -->
