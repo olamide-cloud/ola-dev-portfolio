@@ -1971,3 +1971,8 @@ footer a:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(85, 214, 190, 0.15);
 }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
